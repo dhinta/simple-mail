@@ -1,5 +1,7 @@
+import { Sidebar } from '@simple-mail/sidebar';
+
 export function App() {
-  return <div>Hiii</div>;
+  return <Sidebar />;
 }
 
 export default App;
