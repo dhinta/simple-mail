@@ -6,7 +6,7 @@ export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/simple-mail',
   server: {
-    port: 4200,
+    port: 80,
     host: 'localhost',
   },
   preview: {
