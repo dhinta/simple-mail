@@ -10,12 +10,16 @@ const app = express();
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
+app.get('/', (req, res) => {
+  res.status(403).send({ message: 'Forbidden' });
+});
+
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to simple-mail-api!' });
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.API_PORT || 3000;
 const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+  console.log(`Listening at http://localhost:${port}/`);
 });
 server.on('error', console.error);
